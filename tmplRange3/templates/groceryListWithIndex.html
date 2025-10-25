@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Grocery List</title>
+    </head>
+
+    <body>
+        <h3>Grocery List</h3>
+        <ol>
+            {{range $index, $element := .}}
+                                    <!-- Element and Name are equal-->
+                <li>Index: {{$index}}, Element: {{$element}}, Name {{.}}</li>
+            {{end}}
+        </ol>
+    </body>
+</html>

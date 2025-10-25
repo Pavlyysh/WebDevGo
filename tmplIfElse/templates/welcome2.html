@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Greetings</title>
+    </head>
+
+    <body>
+        <!--
+        passed in value: {{.}}<br><br>
+        
+        {{/* binary comparison operators defined as functions */}}
+        {{/*
+            eq	Returns the boolean truth of arg1 == arg2
+            ne	Returns the boolean truth of arg1 != arg2
+            lt  Returns the boolean truth of arg1 < arg2
+            le	Returns the boolean truth of arg1 <= arg2
+            gt	Returns the boolean truth of arg1 > arg2
+            ge	Returns the boolean truth of arg1 >= arg2
+        */}}
+
+        eq .Language "Russian": {{eq .Language "Russian"}}<br>
+        eq .Language "English": {{eq .Language "English"}}<br>
+        eq .Language "Italian": {{eq .Language "Italian"}}<br><br>
+        -->
+        {{if eq .Language "Russian"}}
+        <h1>Привет {{.Name}}!</h1>
+        {{else if eq .Language "English"}}
+        <h1>Hello {{.Name}}!</h1>
+        {{else if eq .Language "Italian"}}
+        <h1>Ciao {{.Name}}!</h1>
+        {{else}}
+        <ul>
+            <li>Привет {{.Name}}!</li>
+            <li>Hello {{.Name}}!</li>
+            <li>Ciao {{.Name}}!</li>
+        </ul>
+        {{end}}
+    </body>
+</html>

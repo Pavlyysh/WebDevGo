@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Post Form</title>
+    </head>
+
+    <body>
+        <h3>HTML Form Using POST Method</h3>
+        <form action="/processpost" method="POST">
+            <label for="usernameID">Username:</label><br>
+            <input type="text" id="usernameID" name="usernameName"><br>
+            <label for="numberID">Number (1-10):</label><br>
+            <input type="number" id="numberID" name="numberName" min="1" max="10"><br>
+            <label for="floatID">Float64 (between 1 and 5):</label><br>
+            <input type="number" id="floatID" name="floatName" min="1" max="5" step="0.0001"><br>
+            <input type="radio" id="yesUpdateID" name="updateName" value="true">
+            <label for="yesUpdateID">Recieve updates</label><br>
+            <input type="radio" id="noUpdateID" name="updateName" value="false">
+            <label for="noUpdateID">Later</label><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
