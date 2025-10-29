@@ -19,6 +19,10 @@ var db *sql.DB
 var store = sessions.NewCookieStore([]byte("super-secret"))
 
 func main() {
+	store.Options = &sessions.Options{
+		MaxAge:   86400 * 7,
+		HttpOnly: true,
+	}
 	var err error
 	tmpl, _ = tmpl.ParseGlob("templates/*.html")
 	db, err = sql.Open("mysql", "pavlyysh:password@(localhost:3306)/grow_adept")
