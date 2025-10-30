@@ -1,3 +1,5 @@
 # Ignore
 .env
 *.env
+.gitignore
+*.gitignore
