@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Register</title>
+    </head>
+
+    <body>
+        <h3>Registration</h3>
+         <ul>
+            <li>usernames must contain only letters or numbers</li>
+            <li>usernames must be longer than 4 characters but shorter than 51</li>
+            <li>passwords must contain a uppercase letter, lowercase letter, number, and special character</li>
+            <li>passwords must be greater than 11 characters but less than 60</li>
+        </ul><br>
+
+        <form action="/registerauth" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" name="username" id="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" id="password"><br><br>
+            <input type="submit" value="Submit">
+        </form><br><br>
+        {{if .}}
+            {{.}}
+        {{end}}
+    </body>
+</html>
